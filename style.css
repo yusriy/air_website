@@ -1,0 +1,70 @@
+body {
+	font-family: Verdana, Arial, Geneva, Arial Black;
+	font-weight: normal;
+	font-size: 18px;
+}
+
+#Container {
+	width: 1000px;
+	height: auto;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 10px;
+	background: white;
+}
+
+#Header {
+	height: auto;
+	background-color: purple;
+	text-align: center;
+	color: white;
+	padding: 5px;	
+	font-size: 85%;
+}
+
+#SideBar {
+	width: 200px;
+	height: auto;
+	float: right;
+	background: #FFA500;
+	line-height: 1.5em;
+	padding: 5px;
+}
+
+#MainBody {
+	width: 650px;
+	float: left;
+	padding: 5px;
+	
+}
+
+#Footer {
+	clear: both;
+	width: auto;
+	height: auto;
+	font-size: 60%;
+	text-align: center;
+	padding: 10px;
+	background: black;
+	color: white;
+}
+
+
+.imagec{
+	float: left;
+	float: top;
+	height: auto;
+	max-width: 25%;
+}
+
+
+.label{
+	font-weight: bold;
+	line-height: 2.5em;
+	font-size: 110%;
+}
+
+.underline{
+	text-decoration: underline;
+}
+
