@@ -1,7 +1,7 @@
 body {
 	font-family: Verdana, Arial, Geneva, Arial Black;
 	font-weight: normal;
-	font-size: 18px;
+	font-size: 16px;
 }
 
 #Container {
@@ -19,11 +19,11 @@ body {
 	text-align: center;
 	color: white;
 	padding: 5px;	
-	font-size: 85%;
+	font-size: 75%;
 }
 
 #SideBar {
-	width: 200px;
+	width: 250px;
 	height: auto;
 	float: right;
 	background: #FFA500;
@@ -32,9 +32,11 @@ body {
 }
 
 #MainBody {
-	width: 650px;
+	width: 700px;
 	float: left;
 	padding: 5px;
+	font-size: 80%;
+	line-height: 1.5em;
 	
 }
 
