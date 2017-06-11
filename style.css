@@ -9,7 +9,6 @@ body {
 	height: auto;
 	margin-left: auto;
 	margin-right: auto;
-	margin-top: 10px;
 	background: white;
 }
 
@@ -17,13 +16,14 @@ body {
 	height: auto;
 	background-color: purple;
 	text-align: center;
+	display: table;
+	vertical-align: middle;
 	color: white;
-	padding: 5px;	
 	font-size: 75%;
 }
 
 #SideBar {
-	width: 250px;
+	width: 265px;
 	height: auto;
 	float: right;
 	background: #FFA500;
@@ -53,10 +53,10 @@ body {
 
 
 .imagec{
-	float: left;
+	float: right;
 	float: top;
 	height: auto;
-	max-width: 25%;
+	max-width: 27.5%;
 }
 
 
