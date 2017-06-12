@@ -1,7 +1,7 @@
 body {
 	font-family: Verdana, Arial, Geneva, Arial Black;
 	font-weight: normal;
-	font-size: 16px;
+	font-size: 15px;
 }
 
 #Container {
@@ -13,13 +13,14 @@ body {
 }
 
 #Header {
-	height: auto;
+	height: 75px;
 	background-color: purple;
 	text-align: center;
 	display: table;
 	vertical-align: middle;
 	color: white;
 	font-size: 75%;
+	font-family: Arial;
 }
 
 #SideBar {
@@ -29,6 +30,13 @@ body {
 	background: #FFA500;
 	line-height: 1.5em;
 	padding: 5px;
+}
+
+#SideBarlogo {
+    width:265px;
+    height auto;
+    float: right;
+    background: white;
 }
 
 #MainBody {
@@ -59,6 +67,13 @@ body {
 	max-width: 27.7%;
 }
 
+.imageclogo{
+	display: block;
+	margin: auto;
+	float: top;
+	height: auto;
+	max-width: 70%;
+}
 
 .label{
 	font-weight: bold;
