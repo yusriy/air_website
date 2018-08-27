@@ -85,3 +85,22 @@ body {
 	text-decoration: underline;
 }
 
+<!-- START: This is for the drop-down menu -->
+<style media="screen">
+  table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 60%;
+  }
+
+  td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+  }
+
+  tr:nth-child{
+    background-color: #dddddd;
+  }
+</style>
+<!-- END: For the drop down menu -->
