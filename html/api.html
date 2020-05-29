@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Atmosphere Interaction Research</title>
+    <meta charset="utf-8">
+    <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
+    <meta name="robots" content="index, follow">
+    <meta name="keywords" content="HTML5 Template">
+    <meta name="description" content="Haswell - Responsive HTML5 Template">
+    <meta name="author" content="ABCgomel">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <!-- FAVICONS -->
+    <link rel="shortcut icon" href="images/favicon/favicon.png">
+    <link rel="apple-touch-icon" href="images/favicon/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="images/favicon/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="images/favicon/apple-touch-icon-114x114.png">
+
+    <!-- CSS -->
+
+    <!-- FLEXSLIDER SLIDER CSS -->
+    <link rel="stylesheet" type="text/css" href="css/flexslider.css">
+
+    <!-- BOOTSTRAP -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+    <!-- GOOGLE FONT -->
+    <link href='https://fonts.googleapis.com/css?family=Lato:300,400,700%7COpen+Sans:400,300,700' rel='stylesheet' type='text/css'>
+
+    <!-- ICONS ELEGANT FONT & FONT AWESOME & LINEA ICONS -->
+    <link rel="stylesheet" href="css/icons-fonts.css">
+
+    <!-- CSS THEME -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- ANIMATE -->
+    <link rel='stylesheet' href="css/animate.min.css">
+
+    <!-- IE Warning CSS -->
+    <!--[if lte IE 8]><link rel="stylesheet" type="text/css" href="css/ie-warning.css" ><![endif]-->
+    <!--[if lte IE 8]><link rel="stylesheet" type="text/css" href="css/ie8-fix.css" ><![endif]-->
+
+    <!-- Magnific popup  in style.css	Owl Carousel Assets in style.css -->
+
+    <!-- CSS end -->
+
+    <!-- JS begin some js files in bottom of file-->
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+		  <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+		  <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+		<![endif]-->
+
+    <!-- Modernizr -->
+    <!-- <script src="js/modernizr.js"></script> -->
+    <script>
+    function test(){
+        var rawFile = new XMLHttpRequest();
+    rawFile.open("GET", "./apiData.txt", false);
+    rawFile.onreadystatechange = function ()
+    {
+        if(rawFile.readyState === 4)
+        {
+            if(rawFile.status === 200 || rawFile.status == 0)
+            {
+                var allText = rawFile.responseText;
+              
+                var div = document.getElementById("apiDate");
+                //alert(div);
+                div.innerHTML = "";
+                div.innerHTML = allText;
+            }
+        }
+    }
+    rawFile.send(null);
+    }
+    </script>
+    
+
+</head>
+
+<body onload="test()">
+
+    <!-- LOADER -->
+    <div id="loader-overflow">
+        <div id="loader3">Please enable JS</div>
+    </div>
+
+    <div id="wrap" class="boxed ">
+        <div class="grey-bg">
+            <!-- Grey BG  -->
+
+            <!--[if lte IE 8]>
+				<div id="ie-container">
+					<div id="ie-cont-close">
+						<a href='#' onclick='javascript&#058;this.parentNode.parentNode.style.display="none"; return false;'><img src='images/ie-warn/ie-warning-close.jpg' style='border: none;' alt='Close'></a>
+					</div>
+					<div id="ie-cont-content" >
+						<div id="ie-cont-warning">
+							<img src='images/ie-warn/ie-warning.jpg' alt='Warning!'>
+						</div>
+						<div id="ie-cont-text" >
+							<div id="ie-text-bold">
+								You are using an outdated browser
+							</div>
+							<div id="ie-text">
+								For a better experience using this site, please upgrade to a modern web browser.
+							</div>
+						</div>
+						<div id="ie-cont-brows" >
+							<a href='http://www.firefox.com' target='_blank'><img src='images/ie-warn/ie-warning-firefox.jpg' alt='Download Firefox'></a>
+							<a href='http://www.opera.com/download/' target='_blank'><img src='images/ie-warn/ie-warning-opera.jpg' alt='Download Opera'></a>
+							<a href='http://www.apple.com/safari/download/' target='_blank'><img src='images/ie-warn/ie-warning-safari.jpg' alt='Download Safari'></a>
+							<a href='http://www.google.com/chrome' target='_blank'><img src='images/ie-warn/ie-warning-chrome.jpg' alt='Download Google Chrome'></a>
+						</div>
+					</div>
+				</div>
+				<![endif]-->
+
+            <!-- HEADER 1 NO-TRANSPARENT -->
+            <header id="nav" class="header header-1 no-transparent mobile-no-transparent">
+
+                <div class="header-wrapper">
+                    <div class="container-m-30 clearfix">
+                        <div class="logo-row">
+
+                            <!-- LOGO -->
+                            <div class="logo-container-2">
+                                <div class="logo-2">
+                                    <a href="index.html" class="clearfix">
+                                        <img src="images/envtechlogo.png" class="logo-img" alt="Logo">
+                                    </a>
+                                </div>
+                            </div>
+                            <!-- BUTTON -->
+                            <div class="menu-btn-respons-container">
+                                <button type="button" class="navbar-toggle btn-navbar collapsed" data-toggle="collapse" data-target="#main-menu .navbar-collapse">
+                                    <span aria-hidden="true" class="icon_menu hamb-mob-icon"></span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- MAIN MENU CONTAINER -->
+                    <div class="main-menu-container">
+
+                        <div class="container-m-30 clearfix">
+
+                            <!-- MAIN MENU -->
+                            <div id="main-menu">
+                                <div class="navbar navbar-default" role="navigation">
+
+                                    <!-- MAIN MENU LIST -->
+                                    <nav class="collapse collapsing navbar-collapse right-1024">
+                                        <ul class="nav navbar-nav">
+
+                                            <!-- MENU ITEM -->
+
+
+
+
+
+
+
+                                            <li>
+                                                <a href="index.html">Home</a>
+                                            </li>
+                                             <!-- MENU ITEM -->
+                                            <li class="parent current">
+                                                <a href="#">
+                                                    <div class="main-menu-title">Experiment</div>
+                                                </a>
+                                                <ul class="sub">
+                                                    <li class="parent">
+                                                        <a href="CEMACS.html">CEMACS Experiment</a>
+                                                        <ul class="sub">
+                                                            <li><a href="satellite.html">Satellie Image</a></li>
+                                                            <li><a href="api.html">Eddy Covariance Data</a></li>
+                                                            <li><a href="index.html#dailyReport">Daily Report</a></li>
+                                                            <li><a href="model.html">Model Data</a></li>
+                                                        </ul>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <a href="publication.html">Publications</a>
+                                            </li>
+                                            <li>
+                                                <a href="people.html">People</a>
+                                            </li>
+                                            <li>
+                                                <a href="gallery.html">Gallery</a>
+                                            </li>
+                                          
+                                           
+
+                                        </ul>
+
+                                    </nav>
+
+                                </div>
+                            </div>
+                            <!-- END main-menu -->
+
+                        </div>
+                        <!-- END container-m-30 -->
+
+                    </div>
+                    <!-- END main-menu-container -->
+
+                    <!-- SEARCH READ DOCUMENTATION -->
+
+                </div>
+                <!-- END header-wrapper -->
+
+            </header>
+
+            <!-- PAGE TITLE LARGE IMG -->
+            <div class="page-title-cont page-title-large page-title-img grey-dark-bg pt-250" style="background-image: url(images/api2.jpg)">
+                <div class="relative container align-left">
+                    <div class="row">
+
+                        <div class="col-md-8">
+                            <h1 class="page-title">EDDY COVARIANCE DATA</h1>
+                            <div class="page-sub-title">
+                                Lorem ipsum dolor sit amet consectetur
+                            </div>
+                        </div>
+
+                        <div class="col-md-4">
+                            <div class="breadcrumbs">
+                                <a href="index.html">Home</a><span class="slash-divider">/</span><a href="#">Eddy Covariance Data</a>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            
+            
+            
+            
+            
+
+<div class="alert alert-success">
+    <div  id="apiDate"></div>
+            </div>
+
+
+            
+            
+            
+
+
+            <!-- GOOGLE MAP & CONTACT FORM -->
+            <div class="page-section">
+                <div class="container-fluid">
+                    <div class="row" >
+
+
+
+                        <div class="col-md-6">
+                            <div class="contact-form-cont"  style="padding-top: 15px">
+                                <!-- TITLE -->
+                                <div class="mb-40">
+                                    <h2 class="section-title">Download<br /> Eddy Covariance Data </h2>
+                                </div>
+
+                                <!-- CONTACT FORM -->
+                                <div>
+                                    <form id="contact-form" action="#" method="POST">
+
+
+                                        <div class="row" style="line-height:18px">
+                                            <div class="col-md-12 mb-30 ">
+                                                <!-- <label>Your name *</label> -->
+
+                                                <input type="checkbox" name="PPFD_1_1_1" value="a" id="a" style="float: left;margin: 3px 2px 0">
+                                                <label for="PPFD_1_1_1" style="float: left;font-weight: 400;padding-right: 5px"> PPFD_1_1_1&nbsp;</label>
+                                                <input type="checkbox" name="RG_1__1" value="b" id="b" style="float: left;margin: 3px 2px 0">
+                                                <label for="RG_1_1_1" style="float: left;font-weight: 400;padding-right: 5px"> RG_1_1_1&nbsp;</label>
+                                                <input type="checkbox" name="RN_1_1_1" value="c" id="c" style="float: left;margin: 3px 2px 0">
+                                                <label for="RN_1_1_1" style="float: left;font-weight: 400;padding-right: 5px"> RN_1_1_1</label><br /><br />
+
+
+                                                <input type="checkbox" name="RH_1_1_1" value="d" id="d" style="float: left;margin: 3px 2px 0">
+                                                <label for="RH_1_1_1" style="float: left;font-weight: 400;padding-right: 5px"> RH_1_1_1&nbsp;</label>
+                                                <input type="checkbox" name="TA_1_1_1" value="e" id="e" style="float: left;margin: 3px 2px 0">
+                                                <label for="TA_1_1_1" style="float: left;font-weight: 400;padding-right: 5px"> TA_1_1_1</label><br /><br />
+
+
+                                                <input type="checkbox" name="LE" value="f" id="f" style="float: left;margin: 3px 2px 0">
+                                                <label for="LE" style="float: left;font-weight: 400;padding-right: 5px"> LE&nbsp;</label>
+                                                <input type="checkbox" name="co2_flux" value="g" id="g" style="float: left;margin: 3px 2px 0">
+                                                <label for="co2_flux" style="float: left;font-weight: 400;padding-right: 5px"> CO2_FLUX&nbsp;</label>
+                                                <input type="checkbox" name="H" value="h" id="h" style="float: left;margin: 3px 2px 0">
+                                                <label for="H" style="float: left;font-weight: 400;padding-right: 5px"> H</label><br /><br />
+
+                                                <input type="checkbox" name="qc_LE" value="i" id="i" style="float: left;margin: 3px 2px 0">
+                                                <label for="qc_LE" style="float: left;font-weight: 400;padding-right: 5px"> QC_LE&nbsp;</label>
+                                                <input type="checkbox" name="qc_co2_flux" value="j" id="j" style="float: left;margin: 3px 2px 0">
+                                                <label for="qc_co2_flux" style="float: left;font-weight: 400;padding-right: 5px"> QC_CO2_FLUX&nbsp;</label>
+                                                <input type="checkbox" name="qc_H" value="k" id="k" style="float: left;margin: 3px 2px 0">
+                                                <label for="qc_H" style="float: left;font-weight: 400;padding-right: 5px"> QC_H</label><br /><br />
+
+
+                                                <input type="checkbox" name="wind_speed" value="l" id="l" style="float: left;margin: 3px 2px 0">
+                                                <label for="wind_speed" style="float: left;font-weight: 400;padding-right: 5px"> WIND_SPEED&nbsp;</label>
+                                                <input type="checkbox" name="wind_dir" value="m" id="m" style="float: left;margin: 3px 2px 0">
+                                                <label for="wind_dir" style="float: left;font-weight: 400;padding-right: 5px"> WIND_DIR</label> <br /><br />
+
+
+                                                <input type="checkbox" name="P_RAIN_1_1_1" value="n" id="n" style="float: left;margin: 3px 2px 0">
+                                                <label for="P_RAIN_1_1_1" style="float: left;font-weight: 400;padding-right: 5px"> P_RAIN_1_1_1&nbsp;</label>
+                                                <input type="checkbox" name="TS_1_1_1" value="o" id="o" style="float: left;margin: 3px 2px 0">
+                                                <label for="TS_1_1_1" style="float: left;font-weight: 400;padding-right: 5px"> TS_1_1_1&nbsp;</label> <br /><br />
+
+
+                                                <input type="checkbox" name="BIOMET" value="p" id="p" style="float: left;margin: 3px 2px 0" checked>
+                                                <label for="BIOMET" style="float: left;font-weight: 400;font-weight: 400;padding-right: 5px"> BIOMET&nbsp;</label>
+                                                <input type="checkbox" name="FULL_OUTPUT" value="q" id="q" style="float: left;margin: 3px 2px 0">
+                                                <label for="FULL_OUTPUT" style="float: left;font-weight: 400;padding-right: 5px"> FULL OUTPUT&nbsp;</label>
+                                                <br /><br />
+                                            </div>
+                                        </div>
+
+
+                                        <div class="row">
+                                            <div class="col-md-12 mb-30">
+                                                <!-- <label>Your name *</label> -->
+                                                <input type="text" value="" data-msg-required="Please enter start date" maxlength="20" class="controled" name="name" id="startDate" placeholder="START DATE" required>
+                                            </div>
+                                        </div>
+
+                                        <div class="row">
+                                            <div class="col-md-12 mb-30">
+                                                <!-- <label>Your email address *</label> -->
+                                                 <input type="text" value="" data-msg-required="Please enter start date" maxlength="20" class="controled" name="name" id="endDate" placeholder="END DATE" required>
+                                            </div>
+                                        </div>
+
+                                        <div class="row">
+                                            <div class="col-md-12 text-center-xxs">
+                                                <input type="submit" onclick="apiFunction()" value="DOWNLOAD DATA" class="button medium gray" data-loading-text="Loading...">
+                                            </div>
+                                        </div>
+
+                                    </form>
+                                    <div class="alert alert-success hidden animated fadeIn" id="contactSuccess">
+                                        Thanks, your message has been sent to us.
+                                    </div>
+
+                                    <div class="alert alert-danger hidden animated shake" id="contactError">
+                                        <strong>Error!</strong> There was an error sending your message.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+
+                        <div class="col-md-6">
+                            <div class="row">
+
+
+                                <div class="col-md-12">
+                                    <h1 ><span class="font-light">How to use the data</span></h1>
+                                    <p class="mb-20">
+                                        Converting JSON to DataFrame using <b>jsonlite</b> package in <b>R</b></p>
+                                    <pre  style="background: #d5fce8"># Load the library; ensure that you have installed it first
+# install.packages('jsonlite', dependencies=TRUE, repos='http://cran.rstudio.com/')
+library(jsonlite)</pre>
+                                    <pre  style="background: #d5fce8"># Give the input file name to the function. Place the JSON file in the working directory
+data &#60;- fromJSON("data.json") </pre>
+                                    <p class="mb-20">
+                                        Converting JSON to DataFrame using <b>pandas</b> library in <b>Python</b>
+                                        <pre  style="background: #d5fce8"># Import the pandas library
+import pandas as pd</pre>
+                                        <pre  style="background: #d5fce8"># Give the input file name to the function. 
+data=pd.read_json (r'data.json') data.head() </pre>
+                                </div>
+
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+
+
+
+
+
+
+
+
+
+  <!-- FOOTER 2 BLACK -->
+            <footer id="footer3" class="page-section pt-80 pb-50 footer2-black">
+                <div class="container">
+                    <div class="row">
+
+                        <div class="col-md-3 col-sm-3 widget">
+                            <h4>CONTACT US</h4>
+                            <div class="footer-2-text-cont">
+                                <address>
+                                    Environmental Technology, School of Industrial Technology, Universiti Sains Malaysia 11800 Pulau Pinang
+                                </address>
+                            </div>
+                            <div class="footer-2-text-cont">
+                                Tel: +604 653-5201 <br> Fax: +604 653-6375
+
+                            </div>
+                            <div class="footer-2-text-cont">
+                                <a class="a-text" href="mailto:yusriy@usm.my">yusriy@usm.my</a>
+                            </div>
+                        </div>
+
+                        <div class="col-md-3 col-sm-3 widget">
+                            <h4>NAVIGATE</h4>
+                            <ul class="links-list a-text-cont">
+                                <li><a href="index.html">HOME</a></li>
+                                <li><a href="publication.html">PUBLICATIONS</a></li>
+                                <li><a href="people.html">PEOPLE</a></li>
+                                <li><a href="gallery.html">GALLERY</a></li>
+                            </ul>
+                        </div>
+
+
+
+
+
+                        <div class="col-md-3 col-sm-3 widget">
+                            <h4>EXPERIMENT</h4>
+                            <ul class="links-list a-text-cont">
+                                <li><a href="CEMACS.html">CEMACS EXPERIMENT</a></li>
+                                <li><a href="api.html">EDDY COVARIANCE DATA</a></li>
+                                <li><a href="satellite.html">SATELLITE IMAGE</a></li>
+                                <li><a href="index.html#dailyReport">DAILY REPORT</a></li>
+                                <li><a href="model.html">MODEL DATA</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="col-md-3 col-sm-3 widget">
+                            <h4>LATEST PUBLICATIONS</h4>
+                            <div id="post-list-footer">
+
+                                <div class="post-prev-title">
+                                    <h3><a class="a-text" href="https://doi.org/10.1016/j.uclim.2020.100620">Characteristics of wind speed during rainfall event in the tropical urban city. Urban Climate. </a></h3>
+                                </div>
+                                <div class="post-prev-info">
+                                    2020
+                                </div>
+
+                                <div class="post-prev-title">
+                                    <h3><a class="a-text" href="https://doi.org/10.1007/s00704-019-03084-4">Effects of persistent wind speeds on turbulent fluxes in the water-atmosphere interface. Theoretical and Applied Climatology. Published Online</a></h3>
+                                </div>
+                                <div class="post-prev-info">
+                                    13 January 2020
+                                </div>
+
+
+                            </div>
+                        </div>
+                    </div>
+                    <p style="text-align: center">This website is developed by Yusri Yusup and Fatin Masturah. This research is funded by the Universiti Sains Malaysia Research University Grant No. 1001/PTEKIND/811316 and Bridging Grant 2018 Grant No. 304.PTEKIND.6316289.</p>
+                    <p style="text-align: center">
+                        Some of the sensors used are contributed by Elite Scientific Instruments Sdn Bhd.
+                        A-LG-03, Block A, Serdang Perdana Selatan, Section 1, 43300 Seri Kembangan, Selangor Darul Ehsan, Malaysia Tel.: +603 89456100; +603 89454613 (Office) | Fax.:+603 8945 7100 | E-mail: <a href="mailto:yusriy@usm.my" style="text-decoration: underline">sales@esi.com.my</a></p>
+
+                    <div class="footer-2-copy-cont clearfix">
+                        <!-- Social Links -->
+                        <div class="footer-2-soc-a right">
+                            <a href="#" title="Facebook" target="_blank"><i class="fa fa-facebook"></i></a>
+                            <a href="#" title="Twitter" target="_blank"><i class="fa fa-twitter"></i></a>
+                            <a href="#" title="LinkedIn+" target="_blank"><i class="fa fa-linkedin"></i></a>
+                        </div>
+
+                        <!-- Copyright -->
+                        <div class="left">
+
+                            <a class="footer-2-copy" href="http://atmosfera.usm.my/" target="_blank">&copy; atmosfera.usm.my</a>
+                        </div>
+
+
+                    </div>
+
+                </div>
+            </footer>
+
+            <!-- BACK TO TOP -->
+            <p id="back-top">
+                <a href="#top" title="Back to Top"><span class="icon icon-arrows-up"></span></a>
+            </p>
+            
+            
+            
+            <!-- START Bootstrap-Cookie-Alert -->
+				<div class="alert text-center cookiealert" role="alert" >
+                    <div class="row mb-15" style="text-align: left; padding: 10px;"><b>Note:</b> To download the data please enter the following date-time format inside the textbox, YY-MM-DD&nbsp;HH:MM, for example, 2018-01-31 00:00. 4 digits for year, 2 digits for month, day, hour, and minutes.<br> Besides, the data is available in 30 minutes interval, for example,  00:00, 03:30, and 22:00.<div id="mytest"></div></div>
+
+					<div class="row">
+						<button type="button" class="btn btn-primary btn-sm acceptcookies button rounded medium blue" aria-label="Close">I UNDERSTAND</button>
+					</div>
+				</div>
+				<!-- END Bootstrap-Cookie-Alert -->
+            
+            
+
+        </div><!-- End BG -->
+    </div><!-- End wrap -->
+
+    <!-- JS begin -->
+
+    <!-- jQuery  -->
+    <script src="js/jquery-1.11.2.min.js"></script>
+
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- MAGNIFIC POPUP -->
+    <script src='js/jquery.magnific-popup.min.js'></script>
+
+    <!-- PORTFOLIO SCRIPTS -->
+    <script src="js/imagesloaded.pkgd.min.js"></script>
+
+    <!-- COUNTER -->
+    <script src="js/jquery.countTo.js"></script>
+
+    <!-- APPEAR -->
+    <script src="js/jquery.appear.js"></script>
+
+    <!-- OWL CAROUSEL -->
+    <script src="js/owl.carousel.min.js"></script>
+
+    <!-- MAIN SCRIPT -->
+    <script src="js/main.js"></script>
+ <!-- COOKIE ALERT -->
+		<script src="js/cookiealert.js"></script> 
+    
+    <!-- API -->
+    <script>
+    
+        function apiFunction() {
+            var startDate = document.getElementById("startDate").value;
+            var endDate = document.getElementById("endDate").value;
+            var value =""
+            
+            var a = document.getElementById("a");
+            var b = document.getElementById("b");
+            var c = document.getElementById("c");
+            var d = document.getElementById("d");
+            var e = document.getElementById("e");
+            var f = document.getElementById("f");
+            var g = document.getElementById("g");
+            var h = document.getElementById("h");
+            var i = document.getElementById("i");
+            var j = document.getElementById("j");
+            var k = document.getElementById("k");
+            var l = document.getElementById("l");
+            var m = document.getElementById("m");
+            var n = document.getElementById("n");
+            var o = document.getElementById("o");
+            var p = document.getElementById("p");
+            var q = document.getElementById("q");
+
+
+            if (a.checked == true) {
+                value = value + (document.getElementById("a").value);
+            };
+            if (b.checked == true) {
+                value = value + (document.getElementById("b").value);
+            };
+            if (c.checked == true) {
+                value = value + (document.getElementById("c").value);
+            };
+            if (d.checked == true) {
+                value = value + (document.getElementById("d").value);
+            };
+            if (e.checked == true) {
+                value = value + (document.getElementById("e").value);
+            };
+            if (f.checked == true) {
+                value = value + (document.getElementById("f").value);
+            };
+            if (g.checked == true) {
+                value = value + (document.getElementById("g").value);
+            };
+            if (h.checked == true) {
+                value = value + (document.getElementById("h").value);
+            };
+            
+             if (i.checked == true) {
+                value = value + (document.getElementById("i").value);
+            };
+            if (j.checked == true) {
+                value = value + (document.getElementById("j").value);
+            };
+            if (k.checked == true) {
+                value = value + (document.getElementById("k").value);
+            };
+            if (l.checked == true) {
+                value = value + (document.getElementById("l").value);
+            };
+           if (m.checked == true) {
+                value = value + (document.getElementById("m").value);
+            };
+	   if (n.checked == true) {
+                value = value + (document.getElementById("n").value);
+            };
+ 	   if (o.checked == true) {
+                value = value + (document.getElementById("o").value);
+            };
+           if (p.checked == true) {
+                value = value + (document.getElementById("p").value);
+            };
+           if (	q.checked == true) {
+                value = value + (document.getElementById("q").value);
+            };
+	    var y = document.getElementById("warningBox");
+            var z = document.getElementById("warningItem");
+            if (startDate == "" || endDate == "") {
+		y.style.display = "block";
+            } else if (value == "") {
+                z.style.display = "block";
+                // window.open('http://202.170.57.209/all/' + startDate + '/' + endDate);
+            }else {
+            window.open('http://202.170.57.209/api/' + startDate + '/' + endDate + '/' + value);
+		}
+
+        }
+        
+        
+        
+    </script>
+    
+    
+    <!-- JS end -->
+
+</body>
+
+</html>
