@@ -207,7 +207,11 @@
 
 
 
+
+
+
             <!-- PAGE TITLE LARGE IMG -->
+           
 
             <div class="page-title-cont page-title-large page-title-img grey-dark-bg pt-250" style="background-image: url(images/gallery.jpg)">
                 <div class="relative container align-left">
@@ -216,6 +220,9 @@
 
                         <div class="col-md-8">
                             <h1 class="page-title">GALLERY</h1>
+                            <div class="page-sub-title">
+                                Lorem ipsum dolor sit amet consectetur
+                            </div>
                         </div>
 
                         <div class="col-md-4">
@@ -227,6 +234,7 @@
                     </div>
                 </div>
             </div>
+
 
 
 

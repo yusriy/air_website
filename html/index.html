@@ -196,47 +196,37 @@
 
             </header>
 
-            <!-- FLEX SLIDER -->
-            <div class="indent-header">
-                <div class="slider-1 clearfix">
+           
+            
+            
+            <div id="index-link" class="sm-video-bg" style="background-image: url(images/comingsoon2.jpg);">
+                <div class="container sm-content-cont js-height-fullscr">
 
-                    <div class="flex-container">
-                        <div class="flexslider loading">
-                            <ul class="slides">
-
-                                <!-- SLIDE 2 -->
-                                <li style="background:url(images/09.jpg) no-repeat; background-position:50% 0">
-
-                                    <div class="container">
-                                        <div class="sixteen columns contain">
-                                            <p data-toptitle="44%" class="norm-50-wide text-center font-white flex-top-bot" style="font-size: 30px"><span class="slider-caption-border">Atmosphere Interaction Research</span></p>
-                                        </div>
-                                    </div><!-- End Container -->
-
-                                </li><!-- End item -->
-
-                                <!-- SLIDE 3 -->
-                                <!--
-                                <li style="background:url(images/banner2.jpg) no-repeat; background-position:50% 0">
-
-                                    <div class="container">
-                                        <div class="sixteen columns contain">
-                                            <h2 data-toptitle="40%" class="norm-50-wide norm-40-768-959 top-34-767 font-light font-white flex-top-bot">Atmosphere Interaction Research<br></h2>
-                                            <p data-bottomtext="40%" class="norm-50-wide norm-40-768-959 bot-34-767 font-white flex-bot-top"><span class="bold">ENV TECH</span></p>
-                                        </div>
-                                    </div>
-                                -->
-                                <!-- End Container -->
-
-                                </li><!-- End item -->
-
-
-                            </ul>
-                        </div>
+                    <!-- VIDEO BG -->
+                    <!-- If you want to change video - replace video files in folder "video" -->
+                    <div class="sm-video-wrapper">
+                        <div class="sm-video bg-dark-alfa-50"></div>
                     </div>
 
-                </div><!-- End slider -->
+                    <div class="sm-cont-middle" >
+
+                       <div class="row">
+
+                        <div class="col-md-12" style="color: white">
+                            <h1 class="page-title" style="color: white; text-align: center">ATMOSPHERE INTERACTION RESEARCH</h1>
+                        </div>
+
+                        </div>
+                </div>
+ 
             </div>
+            </div>
+            
+            
+            
+            
+            
+            
 
             <!-- FEATURES 6 -->
             <div class="page-section pt-120-b-100-cont">
@@ -244,7 +234,7 @@
                     <div class="row">
 
                         <div class="col-md-4 pb-20">
-                            <h2 class="section-title wow fadeIn">We are measuring <span class="bold">Meteorological Parameters</span></h2>
+                            <h2 class="section-title wow fadeIn">We Measure <br><span class="bold">Fluxes and Meteorological Parameters</span></h2>
                         </div>
 
                         <div class="col-md-8">
@@ -253,7 +243,7 @@
                                 <div class="col-md-4 col-sm-4">
                                     <div class="fes6-box wow fadeIn">
                                         <div class="icon icon-basic-server2"></div>
-                                        <h3>More than 120 features</h3>
+                                        <h3>More than 120 parameters</h3>
                                     </div>
                                 </div>
                                 <div class="col-md-4 col-sm-4">
@@ -550,7 +540,7 @@
 
         </div><!-- End BG -->
     </div><!-- End wrap -->
-
+    
     <!-- JS begin -->
 
     <!-- jQuery  -->
@@ -610,6 +600,25 @@
         }
     </script>
 
+    
+     <!-- BACKGROUND VIDEO -->    
+    <script src="js/jquery.backgroundvideo.min.js"></script> 
+    <script>
+    $(document).ready(function(){
+        if (!($("html").hasClass("mobile"))){
+            var videobackground = new $.backgroundVideo($('.sm-video'), {
+                "align": "centerXY",
+                "width": 1920,
+                "height": 1080,
+                "path": "video/",
+                "filename": "sm-video",
+                "types": ["mp4", "webm"],
+                "autoplay": true,
+                "loop": true
+            });
+        }
+    });
+    </script>
 </body>
 
 </html>
