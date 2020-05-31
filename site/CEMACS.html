@@ -14,10 +14,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
     <!-- FAVICONS -->
-    <link rel="shortcut icon" href="images/favicon/favicon.png">
-    <link rel="apple-touch-icon" href="images/favicon/apple-touch-icon.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="images/favicon/apple-touch-icon-72x72.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="images/favicon/apple-touch-icon-114x114.png">
+    <link rel="shortcut icon" href="images/favicon/favicon-96x96.png">
+    <link rel="apple-touch-icon" href="images/favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="images/favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="images/favicon/apple-icon-114x114.png">
 
     <!-- CSS -->
 
@@ -58,6 +58,84 @@
 
     <!-- Modernizr -->
     <!-- <script src="js/modernizr.js"></script> -->
+
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        section {
+            position: relative;
+            width: 100%;
+            height: 20vh;
+            background: #303236;
+            overflow: hidden;
+        }
+
+        section .wave {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 100px;
+            background: url("images/wave.png");
+            background-size: 1000px 100px;
+        }
+
+        section .wave.wave1 {
+            animation: animate 30s linear infinite;
+            z-index: 1000;
+            opacity: 1;
+            animation-delay: 0s;
+            bottom: 0;
+        }
+
+        section .wave.wave2 {
+            animation: animate2 15s linear infinite;
+            z-index: 999;
+            opacity: 0.5;
+            animation-delay: -5s;
+            bottom: 10px;
+        }
+
+        section .wave.wave3 {
+            animation: animate 30s linear infinite;
+            z-index: 998;
+            opacity: 0.2;
+            animation-delay: -2s;
+            bottom: 15px;
+        }
+
+        section .wave.wave4 {
+            animation: animate2 5s linear infinite;
+            z-index: 997;
+            opacity: 0.7;
+            animation-delay: -5s;
+            bottom: 20px;
+        }
+
+        @keyframes animate {
+            0% {
+                background-position-x: 0;
+            }
+
+            100% {
+                background-position-x: 1000px;
+            }
+        }
+
+        @keyframes animate2 {
+            0% {
+                background-position-x: 0;
+            }
+
+            100% {
+                background-position-x: -1000px;
+            }
+        }
+    </style>
 
 </head>
 
@@ -132,7 +210,7 @@
                             <div id="main-menu">
                                 <div class="navbar navbar-default" role="navigation">
 
-                                   <!-- MAIN MENU LIST -->
+                                    <!-- MAIN MENU LIST -->
                                     <nav class="collapse collapsing navbar-collapse right-1024">
                                         <ul class="nav navbar-nav">
 
@@ -147,7 +225,7 @@
                                             <li>
                                                 <a href="index.html">Home</a>
                                             </li>
-                                             <!-- MENU ITEM -->
+                                            <!-- MENU ITEM -->
                                             <li class="parent current">
                                                 <a href="#">
                                                     <div class="main-menu-title">Experiment</div>
@@ -173,8 +251,8 @@
                                             <li>
                                                 <a href="gallery.html">Gallery</a>
                                             </li>
-                                          
-                                           
+
+
 
                                         </ul>
 
@@ -238,7 +316,7 @@
                             <p class="mb-20">
                                 For this experiment, we constructed an instrumented platform in the tropical coastal location at the <a href="https://cemacs.usm.my/" target="_blank" style="text-decoration: underline">Centre for Marine and Coastal Studies (CEMACS)</a> of <a href="http://www.usm.my/" target="_blank" style="text-decoration: underline">Universiti Sains Malaysia</a>. CEMACS is situated in the national forest reserve at the tropical coast of Pulau Pinang, Malaysia.
                             </p>
-                             <p class="mb-20">
+                            <p class="mb-20">
 
                                 Atmosphere-sea flux exchanges drive the weather and climate engines and the global cabon-moisture cycle. Although anthropogenic carbon emissions have increased significantly for the past half-century, scientists also found that the oceans and seas have more than doubled its absorption of carbon. Due to climate change, climate models predict an increase in sea surface temperature, which could decrease the carbon uptakes of the ocean and sea. Through direct measurements of carbon and moisture fluxes, we can determine the mechanism responsible for these uptakes, critical in improving the climate models.</p>
                             <p class="mb-60">
@@ -255,7 +333,7 @@
 
 
 
-  <!-- FOOTER 2 BLACK -->
+            <!-- FOOTER 2 BLACK -->
             <footer id="footer3" class="page-section pt-80 pb-50 footer2-black">
                 <div class="container">
                     <div class="row">
@@ -348,41 +426,49 @@
                 </div>
             </footer>
 
-                <!-- BACK TO TOP -->
-                <p id="back-top">
-                    <a href="#top" title="Back to Top"><span class="icon icon-arrows-up"></span></a>
-                </p>
+            <section>
+                <div class="wave wave1"></div>
+                <div class="wave wave2"></div>
+                <div class="wave wave3"></div>
+                <div class="wave wave4"></div>
+            </section>
 
-            </div><!-- End BG -->
-        </div><!-- End wrap -->
 
-        <!-- JS begin -->
+            <!-- BACK TO TOP -->
+            <p id="back-top">
+                <a href="#top" title="Back to Top"><span class="icon icon-arrows-up"></span></a>
+            </p>
 
-        <!-- jQuery  -->
-        <script src="js/jquery-1.11.2.min.js"></script>
+        </div><!-- End BG -->
+    </div><!-- End wrap -->
 
-        <!-- Include all compiled plugins (below), or include individual files as needed -->
-        <script src="js/bootstrap.min.js"></script>
+    <!-- JS begin -->
 
-        <!-- MAGNIFIC POPUP -->
-        <script src='js/jquery.magnific-popup.min.js'></script>
+    <!-- jQuery  -->
+    <script src="js/jquery-1.11.2.min.js"></script>
 
-        <!-- PORTFOLIO SCRIPTS -->
-        <script src="js/imagesloaded.pkgd.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
 
-        <!-- COUNTER -->
-        <script src="js/jquery.countTo.js"></script>
+    <!-- MAGNIFIC POPUP -->
+    <script src='js/jquery.magnific-popup.min.js'></script>
 
-        <!-- APPEAR -->
-        <script src="js/jquery.appear.js"></script>
+    <!-- PORTFOLIO SCRIPTS -->
+    <script src="js/imagesloaded.pkgd.min.js"></script>
 
-        <!-- OWL CAROUSEL -->
-        <script src="js/owl.carousel.min.js"></script>
+    <!-- COUNTER -->
+    <script src="js/jquery.countTo.js"></script>
 
-        <!-- MAIN SCRIPT -->
-        <script src="js/main.js"></script>
+    <!-- APPEAR -->
+    <script src="js/jquery.appear.js"></script>
 
-        <!-- JS end -->
+    <!-- OWL CAROUSEL -->
+    <script src="js/owl.carousel.min.js"></script>
+
+    <!-- MAIN SCRIPT -->
+    <script src="js/main.js"></script>
+
+    <!-- JS end -->
 
 </body>
 

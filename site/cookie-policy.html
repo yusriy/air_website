@@ -2,8 +2,9 @@
 
 
 <html lang="en">
- 	<head>
-   <title>Atmosphere Interaction Research</title>
+
+<head>
+    <title>Atmosphere Interaction Research</title>
     <meta charset="utf-8">
     <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
     <meta name="robots" content="index, follow">
@@ -11,66 +12,146 @@
     <meta name="description" content="Atmosphere Interaction Research">
     <meta name="author" content="dr. Yusri Yusup">
 
-		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-		
-		<!-- FAVICONS -->
-    <link rel="shortcut icon" href="images/favicon/favicon.png">
-    <link rel="apple-touch-icon" href="images/favicon/apple-touch-icon.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="images/favicon/apple-touch-icon-72x72.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="images/favicon/apple-touch-icon-114x114.png">
-		
-<!-- CSS -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <!-- FAVICONS -->
+    <link rel="shortcut icon" href="images/favicon/favicon-96x96.png">
+    <link rel="apple-touch-icon" href="images/favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="images/favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="images/favicon/apple-icon-114x114.png">
+
+    <!-- CSS -->
 
     <!-- FLEXSLIDER SLIDER CSS -->
-		<link rel="stylesheet" type="text/css" href="css/flexslider.css"  >
+    <link rel="stylesheet" type="text/css" href="css/flexslider.css">
 
     <!-- BOOTSTRAP -->
-		<link rel="stylesheet" href="css/bootstrap.min.css"> 
-	
-    <!-- GOOGLE FONT -->		
-		<link href='https://fonts.googleapis.com/css?family=Lato:300,400,700%7COpen+Sans:400,300,700' rel='stylesheet' type='text/css'>
-  
-    <!-- ICONS ELEGANT FONT & FONT AWESOME & LINEA ICONS -->		
-		<link rel="stylesheet" href="css/icons-fonts.css" >	
-	
-    <!-- CSS THEME -->		
-		<link rel="stylesheet" href="css/style.css" >
+    <link rel="stylesheet" href="css/bootstrap.min.css">
 
-    <!-- ANIMATE -->	
-		<link rel='stylesheet' href="css/animate.min.css">
-		
+    <!-- GOOGLE FONT -->
+    <link href='https://fonts.googleapis.com/css?family=Lato:300,400,700%7COpen+Sans:400,300,700' rel='stylesheet' type='text/css'>
+
+    <!-- ICONS ELEGANT FONT & FONT AWESOME & LINEA ICONS -->
+    <link rel="stylesheet" href="css/icons-fonts.css">
+
+    <!-- CSS THEME -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- ANIMATE -->
+    <link rel='stylesheet' href="css/animate.min.css">
+
     <!-- IE Warning CSS -->
-		<!--[if lte IE 8]><link rel="stylesheet" type="text/css" href="css/ie-warning.css" ><![endif]-->
-		<!--[if lte IE 8]><link rel="stylesheet" type="text/css" href="css/ie8-fix.css" ><![endif]-->
-    
-    <!-- Magnific popup  in style.css	Owl Carousel Assets in style.css -->		
-	
-<!-- CSS end -->
+    <!--[if lte IE 8]><link rel="stylesheet" type="text/css" href="css/ie-warning.css" ><![endif]-->
+    <!--[if lte IE 8]><link rel="stylesheet" type="text/css" href="css/ie8-fix.css" ><![endif]-->
 
-<!-- JS begin some js files in bottom of file-->
-		
-		<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-		<!--[if lt IE 9]>
+    <!-- Magnific popup  in style.css	Owl Carousel Assets in style.css -->
+
+    <!-- CSS end -->
+
+    <!-- JS begin some js files in bottom of file-->
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
 		  <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
 		  <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
 		<![endif]-->
-		
+
     <!-- Modernizr -->
     <!-- <script src="js/modernizr.js"></script> -->
-		
-	</head>
-	<body>
-	
-		<!-- LOADER -->	
-		<div id="loader-overflow">
-      <div id="loader3">Please enable JS</div>
-    </div>	
 
-		<div id="wrap" class="boxed ">
-			<div class="grey-bg"> <!-- Grey BG  -->	
-				
-				<!--[if lte IE 8]>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        section {
+            position: relative;
+            width: 100%;
+            height: 20vh;
+            background: #303236;
+            overflow: hidden;
+        }
+
+        section .wave {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 100px;
+            background: url("images/wave.png");
+            background-size: 1000px 100px;
+        }
+
+        section .wave.wave1 {
+            animation: animate 30s linear infinite;
+            z-index: 1000;
+            opacity: 1;
+            animation-delay: 0s;
+            bottom: 0;
+        }
+
+        section .wave.wave2 {
+            animation: animate2 15s linear infinite;
+            z-index: 999;
+            opacity: 0.5;
+            animation-delay: -5s;
+            bottom: 10px;
+        }
+
+        section .wave.wave3 {
+            animation: animate 30s linear infinite;
+            z-index: 998;
+            opacity: 0.2;
+            animation-delay: -2s;
+            bottom: 15px;
+        }
+
+        section .wave.wave4 {
+            animation: animate2 5s linear infinite;
+            z-index: 997;
+            opacity: 0.7;
+            animation-delay: -5s;
+            bottom: 20px;
+        }
+
+        @keyframes animate {
+            0% {
+                background-position-x: 0;
+            }
+
+            100% {
+                background-position-x: 1000px;
+            }
+        }
+
+        @keyframes animate2 {
+            0% {
+                background-position-x: 0;
+            }
+
+            100% {
+                background-position-x: -1000px;
+            }
+        }
+    </style>
+
+
+</head>
+
+<body>
+
+    <!-- LOADER -->
+    <div id="loader-overflow">
+        <div id="loader3">Please enable JS</div>
+    </div>
+
+    <div id="wrap" class="boxed ">
+        <div class="grey-bg">
+            <!-- Grey BG  -->
+
+            <!--[if lte IE 8]>
 				<div id="ie-container">
 					<div id="ie-cont-close">
 						<a href='#' onclick='javascript&#058;this.parentNode.parentNode.style.display="none"; return false;'><img src='images/ie-warn/ie-warning-close.jpg' style='border: none;' alt='Close'></a>
@@ -96,7 +177,7 @@
 					</div>
 				</div>
 				<![endif]-->
-				
+
             <!-- HEADER 1 NO-TRANSPARENT -->
             <header id="nav" class="header header-1 no-transparent mobile-no-transparent">
 
@@ -130,7 +211,7 @@
                             <div id="main-menu">
                                 <div class="navbar navbar-default" role="navigation">
 
-                                   <!-- MAIN MENU LIST -->
+                                    <!-- MAIN MENU LIST -->
                                     <nav class="collapse collapsing navbar-collapse right-1024">
                                         <ul class="nav navbar-nav">
 
@@ -145,8 +226,8 @@
                                             <li>
                                                 <a href="index.html">Home</a>
                                             </li>
-                                             <!-- MENU ITEM -->
-                                            <li class="parent current">
+                                            <!-- MENU ITEM -->
+                                            <li class="parent">
                                                 <a href="#">
                                                     <div class="main-menu-title">Experiment</div>
                                                 </a>
@@ -171,8 +252,8 @@
                                             <li>
                                                 <a href="gallery.html">Gallery</a>
                                             </li>
-                                          
-                                           
+
+
 
                                         </ul>
 
@@ -196,7 +277,7 @@
             </header>
 
             <!-- PAGE TITLE LARGE IMG -->
-            <div class="page-title-cont page-title-large page-title-img grey-dark-bg pt-100" >
+            <div class="page-title-cont page-title-large page-title-img grey-dark-bg pt-100">
                 <div class="relative container align-left">
                     <div class="row">
 
@@ -214,67 +295,67 @@
                 </div>
             </div>
 
-                
-                
 
-        
-        <!-- COTENT CONTAINER -->
-        <div class="container p-60-cont">
-          <div class="row">
-          
-            <div class="col-md-12">
-            
-                            <div class="heading-underline">
-                <h3 class="mt-0 mb-50">Cookie Policy for atmosfera.usm.my</h3>
-              </div>
 
-              <p>This is the Cookie Policy for USM Atmosphere Interaction Research website, accessible from atmosfera.usm.my</p>
 
-              <h4><strong>What Are Cookies</strong></h4>
 
-              <p>As is common practice with almost all professional websites this site uses cookies, which are tiny files that are downloaded to your computer, to improve your experience. This page describes what information they gather, how we use it and why we sometimes need to store these cookies. We will also share how you can prevent these cookies from being stored however this may downgrade or 'break' certain elements of the sites functionality.</p>
+            <!-- COTENT CONTAINER -->
+            <div class="container p-60-cont">
+                <div class="row">
 
-              <p>For more general information on cookies see the Wikipedia article on HTTP Cookies.</p>
+                    <div class="col-md-12">
 
-              <h4><strong>How We Use Cookies</strong></h4>
+                        <div class="heading-underline">
+                            <h3 class="mt-0 mb-50">Cookie Policy for atmosfera.usm.my</h3>
+                        </div>
 
-              <p>We use cookies for a variety of reasons detailed below. Unfortunately in most cases there are no industry standard options for disabling cookies without completely disabling the functionality and features they add to this site. It is recommended that you leave on all cookies if you are not sure whether you need them or not in case they are used to provide a service that you use.</p>
+                        <p>This is the Cookie Policy for USM Atmosphere Interaction Research website, accessible from atmosfera.usm.my</p>
 
-              <h4><strong>Disabling Cookies</strong></h4>
+                        <h4><strong>What Are Cookies</strong></h4>
 
-              <p>You can prevent the setting of cookies by adjusting the settings on your browser (see your browser Help for how to do this). Be aware that disabling cookies will affect the functionality of this and many other websites that you visit. Disabling cookies will usually result in also disabling certain functionality and features of the this site. Therefore it is recommended that you do not disable cookies.</p>
+                        <p>As is common practice with almost all professional websites this site uses cookies, which are tiny files that are downloaded to your computer, to improve your experience. This page describes what information they gather, how we use it and why we sometimes need to store these cookies. We will also share how you can prevent these cookies from being stored however this may downgrade or 'break' certain elements of the sites functionality.</p>
 
-              <h4><strong>The Cookies We Set</strong></h4>
+                        <p>For more general information on cookies see the Wikipedia article on HTTP Cookies.</p>
 
-              <ul>
-                <li>
-                  <p>Account related cookies</p>
-                  <p>If you create an account with us then we will use cookies for the management of the signup process and general administration. These cookies will usually be deleted when you log out however in some cases they may remain afterwards to remember your site preferences when logged out.</p>
-                </li>
-              </ul>
+                        <h4><strong>How We Use Cookies</strong></h4>
 
-              <h4><strong>Third Party Cookies</strong></h4>
+                        <p>We use cookies for a variety of reasons detailed below. Unfortunately in most cases there are no industry standard options for disabling cookies without completely disabling the functionality and features they add to this site. It is recommended that you leave on all cookies if you are not sure whether you need them or not in case they are used to provide a service that you use.</p>
 
-              <p>In some special cases we also use cookies provided by trusted third parties. The following section details which third party cookies you might encounter through this site.</p>
+                        <h4><strong>Disabling Cookies</strong></h4>
 
-              <ul>
-                <li>
-                  <p>This site uses Google Analytics which is one of the most widespread and trusted analytics solution on the web for helping us to understand how you use the site and ways that we can improve your experience. These cookies may track things such as how long you spend on the site and the pages that you visit so we can continue to produce engaging content.</p>
-                  <p>For more information on Google Analytics cookies, see the official Google Analytics page.</p>
-                </li>
-              </ul>
+                        <p>You can prevent the setting of cookies by adjusting the settings on your browser (see your browser Help for how to do this). Be aware that disabling cookies will affect the functionality of this and many other websites that you visit. Disabling cookies will usually result in also disabling certain functionality and features of the this site. Therefore it is recommended that you do not disable cookies.</p>
 
-              <h4><strong>More Information</strong></h4>
+                        <h4><strong>The Cookies We Set</strong></h4>
 
-              <p>Hopefully that has clarified things for you and as was previously mentioned if there is something that you aren't sure whether you need or not it's usually safer to leave cookies enabled in case it does interact with one of the features you use on our site.</p>
+                        <ul>
+                            <li>
+                                <p>Account related cookies</p>
+                                <p>If you create an account with us then we will use cookies for the management of the signup process and general administration. These cookies will usually be deleted when you log out however in some cases they may remain afterwards to remember your site preferences when logged out.</p>
+                            </li>
+                        </ul>
+
+                        <h4><strong>Third Party Cookies</strong></h4>
+
+                        <p>In some special cases we also use cookies provided by trusted third parties. The following section details which third party cookies you might encounter through this site.</p>
+
+                        <ul>
+                            <li>
+                                <p>This site uses Google Analytics which is one of the most widespread and trusted analytics solution on the web for helping us to understand how you use the site and ways that we can improve your experience. These cookies may track things such as how long you spend on the site and the pages that you visit so we can continue to produce engaging content.</p>
+                                <p>For more information on Google Analytics cookies, see the official Google Analytics page.</p>
+                            </li>
+                        </ul>
+
+                        <h4><strong>More Information</strong></h4>
+
+                        <p>Hopefully that has clarified things for you and as was previously mentioned if there is something that you aren't sure whether you need or not it's usually safer to leave cookies enabled in case it does interact with one of the features you use on our site.</p>
+                    </div>
+
+                </div>
             </div>
 
-          </div>
-        </div>
-	        
 
-     
-         <!-- FOOTER 2 BLACK -->
+
+            <!-- FOOTER 2 BLACK -->
             <footer id="footer3" class="page-section pt-80 pb-50 footer2-black">
                 <div class="container">
                     <div class="row">
@@ -366,41 +447,55 @@
 
                 </div>
             </footer>
-				<!-- BACK TO TOP -->
-				<p id="back-top">
-          <a href="#top" title="Back to Top"><span class="icon icon-arrows-up"></span></a>
-        </p>
-        
-			</div><!-- End BG -->	
-		</div><!-- End wrap -->	
-			
-<!-- JS begin -->
 
-		<!-- jQuery  -->
-		<script src="js/jquery-1.11.2.min.js"></script>
 
-		<!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="js/bootstrap.min.js"></script>		
 
-		<!-- MAGNIFIC POPUP -->
-		<script src='js/jquery.magnific-popup.min.js'></script>
-    
+
+            <section>
+                <div class="wave wave1"></div>
+                <div class="wave wave2"></div>
+                <div class="wave wave3"></div>
+                <div class="wave wave4"></div>
+            </section>
+
+
+
+            <!-- BACK TO TOP -->
+            <p id="back-top">
+                <a href="#top" title="Back to Top"><span class="icon icon-arrows-up"></span></a>
+            </p>
+
+        </div><!-- End BG -->
+    </div><!-- End wrap -->
+
+    <!-- JS begin -->
+
+    <!-- jQuery  -->
+    <script src="js/jquery-1.11.2.min.js"></script>
+
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- MAGNIFIC POPUP -->
+    <script src='js/jquery.magnific-popup.min.js'></script>
+
     <!-- PORTFOLIO SCRIPTS -->
     <script src="js/imagesloaded.pkgd.min.js"></script>
-    
+
     <!-- COUNTER -->
     <script src="js/jquery.countTo.js"></script>
-    
-    <!-- APPEAR -->    
+
+    <!-- APPEAR -->
     <script src="js/jquery.appear.js"></script>
-    
-    <!-- OWL CAROUSEL -->    
+
+    <!-- OWL CAROUSEL -->
     <script src="js/owl.carousel.min.js"></script>
-    
+
     <!-- MAIN SCRIPT -->
-		<script src="js/main.js"></script>
-    
-<!-- JS end -->	
-	
-	</body>
-</html>		
+    <script src="js/main.js"></script>
+
+    <!-- JS end -->
+
+</body>
+
+</html>

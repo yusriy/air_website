@@ -14,10 +14,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
     <!-- FAVICONS -->
-    <link rel="shortcut icon" href="images/favicon/favicon.png">
-    <link rel="apple-touch-icon" href="images/favicon/apple-touch-icon.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="images/favicon/apple-touch-icon-72x72.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="images/favicon/apple-touch-icon-114x114.png">
+    <link rel="shortcut icon" href="images/favicon/favicon-96x96.png">
+    <link rel="apple-touch-icon" href="images/favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="images/favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="images/favicon/apple-icon-114x114.png">
 
     <!-- CSS -->
 
@@ -58,10 +58,87 @@
 
     <!-- Modernizr -->
     <!-- <script src="js/modernizr.js"></script> -->
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        section {
+            position: relative;
+            width: 100%;
+            height: 20vh;
+            background: #303236;
+            overflow: hidden;
+        }
+
+        section .wave {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 100px;
+            background: url("images/wave.png");
+            background-size: 1000px 100px;
+        }
+
+        section .wave.wave1 {
+            animation: animate 30s linear infinite;
+            z-index: 1000;
+            opacity: 1;
+            animation-delay: 0s;
+            bottom: 0;
+        }
+
+        section .wave.wave2 {
+            animation: animate2 15s linear infinite;
+            z-index: 999;
+            opacity: 0.5;
+            animation-delay: -5s;
+            bottom: 10px;
+        }
+
+        section .wave.wave3 {
+            animation: animate 30s linear infinite;
+            z-index: 998;
+            opacity: 0.2;
+            animation-delay: -2s;
+            bottom: 15px;
+        }
+
+        section .wave.wave4 {
+            animation: animate2 5s linear infinite;
+            z-index: 997;
+            opacity: 0.7;
+            animation-delay: -5s;
+            bottom: 20px;
+        }
+
+        @keyframes animate {
+            0% {
+                background-position-x: 0;
+            }
+
+            100% {
+                background-position-x: 1000px;
+            }
+        }
+
+        @keyframes animate2 {
+            0% {
+                background-position-x: 0;
+            }
+
+            100% {
+                background-position-x: -1000px;
+            }
+        }
+    </style>
 
 </head>
 
 <body>
+
 
     <!-- LOADER -->
     <div id="loader-overflow">
@@ -132,7 +209,7 @@
                             <div id="main-menu">
                                 <div class="navbar navbar-default" role="navigation">
 
-                                 <!-- MAIN MENU LIST -->
+                                    <!-- MAIN MENU LIST -->
                                     <nav class="collapse collapsing navbar-collapse right-1024">
                                         <ul class="nav navbar-nav">
 
@@ -147,7 +224,7 @@
                                             <li>
                                                 <a href="index.html">Home</a>
                                             </li>
-                                             <!-- MENU ITEM -->
+                                            <!-- MENU ITEM -->
                                             <li class="parent">
                                                 <a href="#">
                                                     <div class="main-menu-title">Experiment</div>
@@ -173,8 +250,8 @@
                                             <li>
                                                 <a href="gallery.html">Gallery</a>
                                             </li>
-                                          
-                                           
+
+
 
                                         </ul>
 
@@ -196,6 +273,9 @@
                 <!-- END header-wrapper -->
 
             </header>
+
+
+
 
             <!-- PAGE TITLE LARGE IMG -->
             <div class="page-title-cont page-title-large page-title-img grey-dark-bg pt-250" style="background-image: url(images/team_1.jpg)">
@@ -226,23 +306,22 @@
             <div class="page-section p-50-cont">
                 <div class="container">
                     <div class="row mb-20">
-                        <div class="member col-md-2 col-sm-8 wow fadeInUp" style="text-align: left"></div>
-                        
-                        
-                        
-                        
-                        
-                        
-                        <div class="member col-md-4 col-sm-8 wow fadeInUp" style="text-align: left">
-                            <h3 class="page-title">Project Leader</h3>
+
+
+                        <div class="member col-md-1 col-sm-8 wow fadeInUp"></div>
+
+
+
+                        <div class="member col-md-4 col-sm-4 wow fadeInUp">
+                            <h3 class="page-title" style="text-align: center">Project Leader</h3>
                             <div class="member-image">
-                                <img src="images/team/muka_head_yusri.jpg" alt="img" width="300px" height="300px">
+                                <img src="images/team/muka_head_yusri.jpg" alt="img" width="300px" height="300px" style="border-radius: 50%;display: block;margin-left: auto;margin-right: auto;">
                             </div>
-                            <h3>Yusri Yusup, PhD</h3>
-                            <span>Associate Professor,<br>
-                                Environmental Technology, School of Industrial Technology,
-                                Universiti Sains Malaysia.</span>
-                            <ul class="team-social">
+                            <h3 style="text-align: center">Yusri Yusup, PhD</h3>
+                            <p style="text-align: center">Associate Professor,<br />
+                                Environmental Technology,<br /> School of Industrial Technology,
+                                Universiti Sains Malaysia.</p>
+                            <ul class="team-social" style="display: block;margin-left: auto;margin-right: auto;width: 50%;padding: 0 0 0 0">
                                 <li><a href="https://www.facebook.com/yusri.yusup.92"><span aria-hidden="true" class="social_facebook"></span></a></li>
                                 <li><a href="https://twitter.com/yusupyusri"><span aria-hidden="true" class="social_twitter"></span></a></li>
                                 <li><a href="mailto:yusriy@usm.my"><span aria-hidden="true" class="icon_mail"></span></a></li>
@@ -250,16 +329,19 @@
                             </ul>
                         </div>
 
-                        <div class="member col-md-4 col-sm-4 wow fadeInUp" data-wow-delay="200ms" style="text-align: left">
-                            <h3 class="page-title">Post-doc/Fellow</h3>
+
+                        <div class="member col-md-2 col-sm-8 wow fadeInUp"></div>
+
+                        <div class="member col-md-4 col-sm-8 wow fadeInUp" data-wow-delay="200ms">
+                            <h3 class="page-title" style="text-align: center">Post-doc/Fellow</h3>
                             <div class="member-image">
-                                <img src="images/team/kayode.jpg" alt="img" width="300px" height="300px">
+                                <img src="images/team/kayode.jpg" alt="img" width="300px" height="300px" style="border-radius: 50%;display: block;margin-left: auto;margin-right: auto">
                             </div>
-                            <h3>John S. Kayode, PhD</h3>
-                            <span>Fellow,<br>
-                                Environmental Technology, School of Industrial Technology,
-                                Universiti Sains Malaysia.</span>
-                            <ul class="team-social">
+                            <h3 style="text-align: center">John S. Kayode, PhD</h3>
+                            <p style="text-align: center">Fellow,<br>
+                                Environmental Technology,<br /> School of Industrial Technology,
+                                Universiti Sains Malaysia.</p>
+                            <ul class="team-social" style="display: block;margin-left: auto;margin-right: auto;width: 50%;padding: 0 0 0 0">
                                 <li><a href="mailto:jskayode@usm.my"><span aria-hidden="true" class="icon_mail"></span></a></li>
                             </ul>
                         </div>
@@ -267,49 +349,49 @@
 
                     </div>
 
-                    <div class="row" >
+                    <div class="row">
 
-                        <div class="member col-md-4 col-sm-4 wow fadeInUp" style="text-align: left">
-                            <h3 class="page-title">Postgrad Student</h3>
+                        <div class="member col-md-4 col-sm-4 wow fadeInUp">
+                            <h3 class="page-title" style="text-align: center">Postgrad Student</h3>
                             <div class="member-image">
-                                <img src="images/team/poster_Abdulghani.jpg" alt="img" width="250px" height="250px">
+                                <img src="images/team/poster_Abdulghani.jpg" alt="img" width="250px" height="250px" style="border-radius: 50%;display: block;margin-left: auto;margin-right: auto">
                             </div>
-                            <h3>Abdulghani Essayah Musbah Swesi</h3>
-                            <span>PhD student,<br>
+                            <h3 style="text-align: center">Abdulghani Essayah Musbah Swesi</h3>
+                            <p style="text-align: center">PhD student,<br>
                                 Renewable & Sustainable Energy Technology, School of Industrial Technology,
                                 Universiti Sains Malaysia.<br>
-                                Thesis title : Carbon Processes of the Tropical Coastal Ocean using the Eddy Covariance Method, Remote Sensing, and Numerical Models.</span>
-                            <ul class="team-social">
+                                Thesis title : Carbon Processes of the Tropical Coastal Ocean using the Eddy Covariance Method, Remote Sensing, and Numerical Models.</p>
+                            <ul class="team-social" style="display: block;margin-left: auto;margin-right: auto;width: 50%;padding: 0 0 0 0px">
                                 <li><a href="mailto:abdulghaniml85@student.usm.my"><span aria-hidden="true" class="icon_mail"></span></a></li>
                             </ul>
                         </div>
 
-                        <div class="member col-md-4 col-sm-4 wow fadeInUp" data-wow-delay="200ms" style="text-align: left">
-                            <h3 class="page-title">Postgrad Student</h3>
+                        <div class="member col-md-4 col-sm-4 wow fadeInUp" data-wow-delay="200ms">
+                            <h3 class="page-title" style="text-align: center">Postgrad Student</h3>
                             <div class="member-image">
-                                <img src="images/team/poster_anis.jpg" alt="img" width="250px" height="250px">
+                                <img src="images/team/poster_anis.jpg" alt="img" width="250px" height="250px" style="border-radius: 50%;display: block;margin-left: auto;margin-right: auto">
                             </div>
-                            <h3>Anis Suriani Ibrahim</h3>
-                            <span>PhD student,<br>
+                            <h3 style="text-align: center">Anis Suriani Ibrahim</h3>
+                            <p style="text-align: center">PhD student,<br>
                                 Environmental Technology, School of Industrial Technology,
                                 Universiti Sains Malaysia.<br>
-                                Thesis title (tentative): The Impact of Non-Productive Phase of an Oil Palm Plantation on Local Climate Change in Malaysia Using the Eddy Covariance Method</span>
-                            <ul class="team-social">
+                                Thesis title (tentative): The Impact of Non-Productive Phase of an Oil Palm Plantation on Local Climate Change in Malaysia Using the Eddy Covariance Method.</p>
+                            <ul class="team-social" style="display: block;margin-left: auto;margin-right: auto;width: 50%;padding: 0 0 0 0px">
                                 <li><a href="mailto:anis_suriani@yahoo.com"><span aria-hidden="true" class="icon_mail"></span></a></li>
                             </ul>
                         </div>
 
-                        <div class="member col-md-4 col-sm-4 wow fadeInUp" data-wow-delay="400ms" style="text-align: left">
-                            <h3 class="page-title">Postgrad Student</h3>
+                        <div class="member col-md-4 col-sm-4 wow fadeInUp" data-wow-delay="400ms">
+                            <h3 class="page-title" style="text-align: center">Postgrad Student</h3>
                             <div class="member-image">
-                                <img src="images/team/hasimah_photo.jpg" alt="img" width="250px" height="250px">
+                                <img src="images/team/hasimah_photo.jpg" alt="img" width="250px" height="250px" style="border-radius: 50%;display: block;margin-left: auto;margin-right: auto">
                             </div>
-                            <h3>Hasimah Mos</h3>
-                            <span>MSc student,<br>
+                            <h3 style="text-align: center">Hasimah Mos</h3>
+                            <p style="text-align: center">MSc student,<br>
                                 Environmental Technology, School of Industrial Technology,
                                 Universiti Sains Malaysia.<br>
-                                Thesis title (tentative): Carbon Oxidation Loss from a Bare Drained Peatland using Flux Techniques</span>
-                            <ul class="team-social">
+                                Thesis title (tentative): Carbon Oxidation Loss from a Bare Drained Peatland using Flux Techniques</p>
+                            <ul class="team-social" style="display: block;margin-left: auto;margin-right: auto;width: 50%;padding: 0 0 0 0px">
                                 <li><a href="mailto:hasimah.mos@student.usm.my"><span aria-hidden="true" class="icon_mail"></span></a></li>
                             </ul>
                         </div>
@@ -319,47 +401,47 @@
 
                     <div class="row">
 
-                        <div class="member col-md-4 col-sm-4 wow fadeInUp" style="text-align: left">
-                            <h3 class="page-title">Intern</h3>
+                        <div class="member col-md-4 col-sm-4 wow fadeInUp">
+                            <h3 class="page-title" style="text-align: center">Intern</h3>
                             <div class="member-image">
-                                <img src="images/team/Ehsan_photo.jpg" alt="img" width="250px" height="250px">
+                                <img src="images/team/Ehsan_photo.jpg" alt="img" width="250px" height="250px" style="border-radius: 50%;display: block;margin-left: auto;margin-right: auto">
                             </div>
-                            <h3>Ehsan Jolous Jamshidi</h3>
-                            <span style="text-align: center">MSc (Data Science & Analytics),<br>
+                            <h3 style="text-align: center">Ehsan Jolous Jamshidi</h3>
+                            <p style="text-align: center">MSc (Data Science & Analytics),<br>
                                 School of Computer Sciences Universiti Sains Malaysia.<br>
                                 Assisted in the development of API, Database, and anomaly detection of the Coastal Water Temperature.<br>
-                               January 2020 to June 2020</span>
-                            <ul class="team-social">
+                                January 2020 to June 2020</p>
+                            <ul class="team-social" style="display: block;margin-left: auto;margin-right: auto;width: 50%;padding: 0 0 0 0px">
                                 <li><a href="mailto:ej.jamshidi@gmail.com"><span aria-hidden="true" class="icon_mail"></span></a></li>
                             </ul>
                         </div>
 
-                        <div class="member col-md-4 col-sm-4 wow fadeInUp" data-wow-delay="200ms" style="text-align: left">
-                            <h3 class="page-title">Intern</h3>
+                        <div class="member col-md-4 col-sm-4 wow fadeInUp" data-wow-delay="200ms">
+                            <h3 class="page-title" style="text-align: center">Intern</h3>
                             <div class="member-image">
-                                <img src="images/team/atiqah_photo.jpg" alt="img" width="250px" height="250px">
+                                <img src="images/team/atiqah_photo.jpg" alt="img" width="250px" height="250px" style="border-radius: 50%;display: block;margin-left: auto;margin-right: auto">
                             </div>
-                            <h3>Nurul Atiqah Mohd Nasarudin</h3>
-                            <span>Kulliyyah of Science,<br>
+                            <h3 style="text-align: center">Nurul Atiqah Mohd Nasarudin</h3>
+                            <p style="text-align: center">Kulliyyah of Science,<br>
                                 International Islamic University Malaysia.<br>
                                 Assisted in the development of eddy covariance automated data transmission system.<br>
-                                31 January 2017 to 14 July 2017</span>
-                            <ul class="team-social">
+                                31 January 2017 to 14 July 2017</p>
+                            <ul class="team-social" style="display: block;margin-left: auto;margin-right: auto;width: 50%;padding: 0 0 0 0px">
                                 <li><a href="mailto:nurulatiqahnasarudin94@gmail.com"><span aria-hidden="true" class="icon_mail"></span></a></li>
                             </ul>
                         </div>
 
-                        <div class="member col-md-4 col-sm-4 wow fadeInUp" data-wow-delay="400ms" style="text-align: left" >
-                            <h3 class="page-title">Intern</h3>
+                        <div class="member col-md-4 col-sm-4 wow fadeInUp" data-wow-delay="400ms">
+                            <h3 class="page-title" style="text-align: center">Intern</h3>
                             <div class="member-image">
-                                <img src="images/team/fatin_photo.jpg" alt="img" width="250px" height="250px">
+                                <img src="images/team/fatin_photo.jpg" alt="img" width="250px" height="250px" style="border-radius: 50%;display: block;margin-left: auto;margin-right: auto">
                             </div>
-                            <h3>Fatin Masturah Amin Razip</h3>
-                            <span>Environmental Technology, Faculty of Applied Sciences,<br>
+                            <h3 style="text-align: center">Fatin Masturah Amin Razip</h3>
+                            <p style="text-align: center">Environmental Technology, Faculty of Applied Sciences,<br>
                                 Universiti Teknologi MARA (UiTM).<br>
                                 Assisted in the development of the automated satellite data collection and website presentation.<br>
-                                16 July 2018 to 7 September 2018</span>
-                            <ul class="team-social">
+                                16 July 2018 to 7 September 2018</p>
+                            <ul class="team-social" style="display: block;margin-left: auto;margin-right: auto;width: 50%;padding: 0 0 0 0px">
                                 <li><a href="mailto:fatinamasturana@gmail.com"><span aria-hidden="true" class="icon_mail"></span></a></li>
                             </ul>
                         </div>
@@ -379,8 +461,10 @@
 
 
 
-  <!-- FOOTER 2 BLACK -->
-            <footer id="footer3" class="page-section pt-80 pb-50 footer2-black">
+
+
+            <!-- FOOTER 2 BLACK -->
+            <footer id="footer3" class="page-section pt-80 pb-20 footer2-black">
                 <div class="container">
                     <div class="row">
 
@@ -467,10 +551,20 @@
                         </div>
 
 
+
                     </div>
 
                 </div>
             </footer>
+
+            <section>
+                <div class="wave wave1"></div>
+                <div class="wave wave2"></div>
+                <div class="wave wave3"></div>
+                <div class="wave wave4"></div>
+            </section>
+
+
 
             <!-- BACK TO TOP -->
             <p id="back-top">

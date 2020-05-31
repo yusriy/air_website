@@ -13,10 +13,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
     <!-- FAVICONS -->
-    <link rel="shortcut icon" href="images/favicon/favicon.png">
-    <link rel="apple-touch-icon" href="images/favicon/apple-touch-icon.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="images/favicon/apple-touch-icon-72x72.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="images/favicon/apple-touch-icon-114x114.png">
+    <link rel="shortcut icon" href="images/favicon/favicon-96x96.png">
+    <link rel="apple-touch-icon" href="images/favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="images/favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="images/favicon/apple-icon-114x114.png">
 
     <!-- CSS -->
 
@@ -57,6 +57,83 @@
 
     <!-- Modernizr -->
     <!-- <script src="js/modernizr.js"></script> -->
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        section {
+            position: relative;
+            width: 100%;
+            height: 20vh;
+            background: #303236;
+            overflow: hidden;
+        }
+
+        section .wave {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 100px;
+            background: url("images/wave.png");
+            background-size: 1000px 100px;
+        }
+
+        section .wave.wave1 {
+            animation: animate 30s linear infinite;
+            z-index: 1000;
+            opacity: 1;
+            animation-delay: 0s;
+            bottom: 0;
+        }
+
+        section .wave.wave2 {
+            animation: animate2 15s linear infinite;
+            z-index: 999;
+            opacity: 0.5;
+            animation-delay: -5s;
+            bottom: 10px;
+        }
+
+        section .wave.wave3 {
+            animation: animate 30s linear infinite;
+            z-index: 998;
+            opacity: 0.2;
+            animation-delay: -2s;
+            bottom: 15px;
+        }
+
+        section .wave.wave4 {
+            animation: animate2 5s linear infinite;
+            z-index: 997;
+            opacity: 0.7;
+            animation-delay: -5s;
+            bottom: 20px;
+        }
+
+        @keyframes animate {
+            0% {
+                background-position-x: 0;
+            }
+
+            100% {
+                background-position-x: 1000px;
+            }
+        }
+
+        @keyframes animate2 {
+            0% {
+                background-position-x: 0;
+            }
+
+            100% {
+                background-position-x: -1000px;
+            }
+        }
+    </style>
 
 </head>
 
@@ -146,7 +223,7 @@
                                             <li class="current">
                                                 <a href="index.html">Home</a>
                                             </li>
-                                             <!-- MENU ITEM -->
+                                            <!-- MENU ITEM -->
                                             <li class="parent">
                                                 <a href="#">
                                                     <div class="main-menu-title">Experiment</div>
@@ -172,8 +249,8 @@
                                             <li>
                                                 <a href="gallery.html">Gallery</a>
                                             </li>
-                                          
-                                           
+
+
 
                                         </ul>
 
@@ -196,9 +273,9 @@
 
             </header>
 
-           
-            
-            
+
+
+
             <div id="index-link" class="sm-video-bg" style="background-image: url(images/comingsoon2.jpg);">
                 <div class="container sm-content-cont js-height-fullscr">
 
@@ -208,25 +285,25 @@
                         <div class="sm-video bg-dark-alfa-50"></div>
                     </div>
 
-                    <div class="sm-cont-middle" >
+                    <div class="sm-cont-middle">
 
-                       <div class="row">
+                        <div class="row">
 
-                        <div class="col-md-12" style="color: white">
-                            <h1 class="page-title" style="color: white; text-align: center">ATMOSPHERE INTERACTION RESEARCH</h1>
+                            <div class="col-md-12" style="color: white">
+                                <h1 class="page-title" style="color: white; text-align: center">ATMOSPHERE INTERACTION RESEARCH</h1>
+                            </div>
+
                         </div>
+                    </div>
 
-                        </div>
                 </div>
- 
             </div>
-            </div>
-            
-            
-            
-            
-            
-            
+
+
+
+
+
+
 
             <!-- FEATURES 6 -->
             <div class="page-section pt-120-b-100-cont">
@@ -406,14 +483,14 @@
                                 </div>
 
                                 <div class="col-xs-6 col-sm-2 text-center">
-                                    <a href="http://www.indtech.usm.my/" target="_blank"><img alt="client" src="images/clients/envtechicon.png" ></a>
+                                    <a href="http://www.indtech.usm.my/" target="_blank"><img alt="client" src="images/clients/envtechicon.png"></a>
                                 </div>
 
                                 <div class="col-xs-6 col-sm-4 text-center">
                                     <blockquote class="quote mb-0 pl-50-min-1169">
-                                <h2 class="section-title">Partner <span>with</span></h2>
+                                        <h2 class="section-title">Partner <span>with</span></h2>
 
-                            </blockquote>
+                                    </blockquote>
                                 </div>
                                 <div class="col-xs-6 col-sm-2 text-center">
                                     <a href="https://esi.com.my/" target="_blank"><img alt="client" src="images/clients/esi_logo.jpeg"></a>
@@ -425,7 +502,7 @@
 
 
                         </div>
-                       
+
 
                     </div>
                 </div>
@@ -440,7 +517,7 @@
 
 
 
-         <!-- FOOTER 2 BLACK -->
+            <!-- FOOTER 2 BLACK -->
             <footer id="footer3" class="page-section pt-80 pb-50 footer2-black">
                 <div class="container">
                     <div class="row">
@@ -532,18 +609,26 @@
 
                 </div>
             </footer>
-            
-             <!-- START Bootstrap-Cookie-Alert -->
-				<div class="alert text-center cookiealert" role="alert">
-                     <button id="close-cookie-alert" class="close" aria-label="close" title="close" style="margin-right: -10px;">x</button>
-          <div class="row mb-15"><b>Do you like cookies?</b> &#x1F36A; We use cookies to ensure you get the best experience on our website. <a href="cookie-policy.html" target="_blank">Learn&nbsp;more</a></div>
 
-					<div class="row">
-						<button type="button" class="btn btn-primary btn-sm acceptcookies button rounded medium blue" aria-label="Close">I AGREE</button>
-					</div>
-				</div>
-				<!-- END Bootstrap-Cookie-Alert -->
-            
+            <!-- START Bootstrap-Cookie-Alert -->
+            <div class="alert text-center cookiealert" role="alert">
+                <button id="close-cookie-alert" class="close" aria-label="close" title="close" style="margin-right: -10px;">x</button>
+                <div class="row mb-15"><b>Do you like cookies?</b> &#x1F36A; We use cookies to ensure you get the best experience on our website. <a href="cookie-policy.html" target="_blank">Learn&nbsp;more</a></div>
+
+                <div class="row">
+                    <button type="button" class="btn btn-primary btn-sm acceptcookies button rounded medium blue" aria-label="Close">I AGREE</button>
+                </div>
+            </div>
+            <!-- END Bootstrap-Cookie-Alert -->
+
+
+            <section>
+                <div class="wave wave1"></div>
+                <div class="wave wave2"></div>
+                <div class="wave wave3"></div>
+                <div class="wave wave4"></div>
+            </section>
+
 
             <!-- BACK TO TOP -->
             <p id="back-top">
@@ -552,7 +637,7 @@
 
         </div><!-- End BG -->
     </div><!-- End wrap -->
-    
+
     <!-- JS begin -->
 
     <!-- jQuery  -->
@@ -584,9 +669,9 @@
     <!-- FLEX SLIDER SCRIPTS  -->
     <script src="js/jquery.flexslider-min.js"></script>
     <script src="js/flex-slider.js"></script>
-    
-     <!-- COOKIE ALERT -->
-		<script src="js/cookiealert.js"></script> 
+
+    <!-- COOKIE ALERT -->
+    <script src="js/cookiealert.js"></script>
 
     <!-- JS end -->
 
@@ -615,24 +700,24 @@
         }
     </script>
 
-    
-     <!-- BACKGROUND VIDEO -->    
-    <script src="js/jquery.backgroundvideo.min.js"></script> 
+
+    <!-- BACKGROUND VIDEO -->
+    <script src="js/jquery.backgroundvideo.min.js"></script>
     <script>
-    $(document).ready(function(){
-        if (!($("html").hasClass("mobile"))){
-            var videobackground = new $.backgroundVideo($('.sm-video'), {
-                "align": "centerXY",
-                "width": 1920,
-                "height": 1080,
-                "path": "video/",
-                "filename": "sm-video",
-                "types": ["mp4", "webm"],
-                "autoplay": true,
-                "loop": true
-            });
-        }
-    });
+        $(document).ready(function() {
+            if (!($("html").hasClass("mobile"))) {
+                var videobackground = new $.backgroundVideo($('.sm-video'), {
+                    "align": "centerXY",
+                    "width": 1920,
+                    "height": 1080,
+                    "path": "video/",
+                    "filename": "sm-video",
+                    "types": ["mp4", "webm"],
+                    "autoplay": true,
+                    "loop": true
+                });
+            }
+        });
     </script>
 </body>
 
