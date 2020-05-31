@@ -6,9 +6,9 @@
     <meta charset="utf-8">
     <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
     <meta name="robots" content="index, follow">
-    <meta name="keywords" content="HTML5 Template">
-    <meta name="description" content="Haswell - Responsive HTML5 Template">
-    <meta name="author" content="ABCgomel">
+    <meta name="keywords" content="Atmosphere Interaction Research">
+    <meta name="description" content="Atmosphere Interaction Research">
+    <meta name="author" content="dr. Yusri Yusup">
 
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
@@ -58,32 +58,29 @@
     <!-- Modernizr -->
     <!-- <script src="js/modernizr.js"></script> -->
     <script>
-    function test(){
-        var rawFile = new XMLHttpRequest();
-    rawFile.open("GET", "./apiData.txt", false);
-    rawFile.onreadystatechange = function ()
-    {
-        if(rawFile.readyState === 4)
-        {
-            if(rawFile.status === 200 || rawFile.status == 0)
-            {
-                var allText = rawFile.responseText;
-              
-                var div = document.getElementById("apiDate");
-                //alert(div);
-                div.innerHTML = "";
-                div.innerHTML = allText;
+        function readTextFile() {
+            var rawFile = new XMLHttpRequest();
+            rawFile.open("GET", "./apiData.txt", false);
+            rawFile.onreadystatechange = function() {
+                if (rawFile.readyState === 4) {
+                    if (rawFile.status === 200 || rawFile.status == 0) {
+                        var allText = rawFile.responseText;
+
+                        var div = document.getElementById("apiDate");
+                        //alert(div);
+                        div.innerHTML = "";
+                        div.innerHTML = allText;
+                    }
+                }
             }
+            rawFile.send(null);
         }
-    }
-    rawFile.send(null);
-    }
     </script>
-    
+
 
 </head>
 
-<body onload="test()">
+<body onload="readTextFile()">
 
     <!-- LOADER -->
     <div id="loader-overflow">
@@ -169,7 +166,7 @@
                                             <li>
                                                 <a href="index.html">Home</a>
                                             </li>
-                                             <!-- MENU ITEM -->
+                                            <!-- MENU ITEM -->
                                             <li class="parent current">
                                                 <a href="#">
                                                     <div class="main-menu-title">Experiment</div>
@@ -195,8 +192,8 @@
                                             <li>
                                                 <a href="gallery.html">Gallery</a>
                                             </li>
-                                          
-                                           
+
+
 
                                         </ul>
 
@@ -238,31 +235,30 @@
                 </div>
             </div>
 
-            
-            
-            
-            
-            
 
-<div class="alert alert-success">
-    <div  id="apiDate"></div>
+
+
+
+
+
+            <div class="alert alert-success">
+                <div id="apiDate"></div>
             </div>
 
 
-            
-            
-            
+
+
 
 
             <!-- GOOGLE MAP & CONTACT FORM -->
             <div class="page-section">
                 <div class="container-fluid">
-                    <div class="row" >
+                    <div class="row">
 
 
 
                         <div class="col-md-6">
-                            <div class="contact-form-cont"  style="padding-top: 15px">
+                            <div class="contact-form-cont" style="padding-top: 15px">
                                 <!-- TITLE -->
                                 <div class="mb-40">
                                     <h2 class="section-title">Download<br /> Eddy Covariance Data </h2>
@@ -274,7 +270,7 @@
 
 
                                         <div class="row" style="line-height:18px">
-                                            <div class="col-md-12 mb-30 ">
+                                            <div class="col-md-12 mb-10 ">
                                                 <!-- <label>Your name *</label> -->
 
                                                 <input type="checkbox" name="PPFD_1_1_1" value="a" id="a" style="float: left;margin: 3px 2px 0">
@@ -326,6 +322,11 @@
                                             </div>
                                         </div>
 
+                                        <div class="alert alert-info">
+                                            <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+                                            <span aria-hidden="true" class="alert-icon icon_info_alt"></span><strong>Note:</strong> To download the data please enter the following date-time format inside the textbox, YY-MM-DD&nbsp;HH:MM, for example, 2018-01-31 00:00. 4 digits for year, 2 digits for month, day, hour, and minutes.<br> Besides, the data is available in 30 minutes interval, for example, 00:00, 03:30, and 22:00.
+                                        </div>
+
 
                                         <div class="row">
                                             <div class="col-md-12 mb-30">
@@ -337,7 +338,7 @@
                                         <div class="row">
                                             <div class="col-md-12 mb-30">
                                                 <!-- <label>Your email address *</label> -->
-                                                 <input type="text" value="" data-msg-required="Please enter start date" maxlength="20" class="controled" name="name" id="endDate" placeholder="END DATE" required>
+                                                <input type="text" value="" data-msg-required="Please enter start date" maxlength="20" class="controled" name="name" id="endDate" placeholder="END DATE" required>
                                             </div>
                                         </div>
 
@@ -348,6 +349,7 @@
                                         </div>
 
                                     </form>
+
                                     <div class="alert alert-success hidden animated fadeIn" id="contactSuccess">
                                         Thanks, your message has been sent to us.
                                     </div>
@@ -366,19 +368,19 @@
 
 
                                 <div class="col-md-12">
-                                    <h1 ><span class="font-light">How to use the data</span></h1>
+                                    <h1><span class="font-light">How to use the data</span></h1>
                                     <p class="mb-20">
                                         Converting JSON to DataFrame using <b>jsonlite</b> package in <b>R</b></p>
-                                    <pre  style="background: #d5fce8"># Load the library; ensure that you have installed it first
+                                    <pre style="background: #eefff8"># Load the library; ensure that you have installed it first
 # install.packages('jsonlite', dependencies=TRUE, repos='http://cran.rstudio.com/')
 library(jsonlite)</pre>
-                                    <pre  style="background: #d5fce8"># Give the input file name to the function. Place the JSON file in the working directory
+                                    <pre style="background: #eefff8"># Give the input file name to the function. Place the JSON file in the working directory
 data &#60;- fromJSON("data.json") </pre>
                                     <p class="mb-20">
                                         Converting JSON to DataFrame using <b>pandas</b> library in <b>Python</b>
-                                        <pre  style="background: #d5fce8"># Import the pandas library
+                                        <pre style="background: #eefff8"># Import the pandas library
 import pandas as pd</pre>
-                                        <pre  style="background: #d5fce8"># Give the input file name to the function. 
+                                        <pre style="background: #eefff8"># Give the input file name to the function. 
 data=pd.read_json (r'data.json') data.head() </pre>
                                 </div>
 
@@ -397,8 +399,7 @@ data=pd.read_json (r'data.json') data.head() </pre>
 
 
 
-
-  <!-- FOOTER 2 BLACK -->
+            <!-- FOOTER 2 BLACK -->
             <footer id="footer3" class="page-section pt-80 pb-50 footer2-black">
                 <div class="container">
                     <div class="row">
@@ -495,20 +496,15 @@ data=pd.read_json (r'data.json') data.head() </pre>
             <p id="back-top">
                 <a href="#top" title="Back to Top"><span class="icon icon-arrows-up"></span></a>
             </p>
-            
-            
-            
-            <!-- START Bootstrap-Cookie-Alert -->
-				<div class="alert text-center cookiealert" role="alert" >
-                    <div class="row mb-15" style="text-align: left; padding: 10px;"><b>Note:</b> To download the data please enter the following date-time format inside the textbox, YY-MM-DD&nbsp;HH:MM, for example, 2018-01-31 00:00. 4 digits for year, 2 digits for month, day, hour, and minutes.<br> Besides, the data is available in 30 minutes interval, for example,  00:00, 03:30, and 22:00.<div id="mytest"></div></div>
 
-					<div class="row">
-						<button type="button" class="btn btn-primary btn-sm acceptcookies button rounded medium blue" aria-label="Close">I UNDERSTAND</button>
-					</div>
-				</div>
-				<!-- END Bootstrap-Cookie-Alert -->
-            
-            
+
+
+
+
+
+
+
+
 
         </div><!-- End BG -->
     </div><!-- End wrap -->
@@ -538,17 +534,16 @@ data=pd.read_json (r'data.json') data.head() </pre>
 
     <!-- MAIN SCRIPT -->
     <script src="js/main.js"></script>
- <!-- COOKIE ALERT -->
-		<script src="js/cookiealert.js"></script> 
-    
+    <!-- COOKIE ALERT -->
+    <script src="js/cookiealert.js"></script>
+
     <!-- API -->
     <script>
-    
         function apiFunction() {
             var startDate = document.getElementById("startDate").value;
             var endDate = document.getElementById("endDate").value;
-            var value =""
-            
+            var value = ""
+
             var a = document.getElementById("a");
             var b = document.getElementById("b");
             var c = document.getElementById("c");
@@ -592,8 +587,8 @@ data=pd.read_json (r'data.json') data.head() </pre>
             if (h.checked == true) {
                 value = value + (document.getElementById("h").value);
             };
-            
-             if (i.checked == true) {
+
+            if (i.checked == true) {
                 value = value + (document.getElementById("i").value);
             };
             if (j.checked == true) {
@@ -605,39 +600,36 @@ data=pd.read_json (r'data.json') data.head() </pre>
             if (l.checked == true) {
                 value = value + (document.getElementById("l").value);
             };
-           if (m.checked == true) {
+            if (m.checked == true) {
                 value = value + (document.getElementById("m").value);
             };
-	   if (n.checked == true) {
+            if (n.checked == true) {
                 value = value + (document.getElementById("n").value);
             };
- 	   if (o.checked == true) {
+            if (o.checked == true) {
                 value = value + (document.getElementById("o").value);
             };
-           if (p.checked == true) {
+            if (p.checked == true) {
                 value = value + (document.getElementById("p").value);
             };
-           if (	q.checked == true) {
+            if (q.checked == true) {
                 value = value + (document.getElementById("q").value);
             };
-	    var y = document.getElementById("warningBox");
+            var y = document.getElementById("warningBox");
             var z = document.getElementById("warningItem");
             if (startDate == "" || endDate == "") {
-		y.style.display = "block";
+                y.style.display = "block";
             } else if (value == "") {
                 z.style.display = "block";
                 // window.open('http://202.170.57.209/all/' + startDate + '/' + endDate);
-            }else {
-            window.open('http://202.170.57.209/api/' + startDate + '/' + endDate + '/' + value);
-		}
+            } else {
+                window.open('http://202.170.57.209/api/' + startDate + '/' + endDate + '/' + value);
+            }
 
         }
-        
-        
-        
     </script>
-    
-    
+
+
     <!-- JS end -->
 
 </body>
